@@ -27,41 +27,41 @@
       --radius: 12px;
       --shadow-suave: 0 10px 25px rgba(0, 0, 0, 0.08);
     }
-     
-    @media (max-width: 768px) {
+        
+  /* Ocultar firma en escritorio */
+  .firma-mobile {
+      display: none;
+}
+   @media (max-width: 768px) {
 
-    .hero-card-footer {
-      margin-top: 1.2rem;
-      padding-top: 0.8rem;
-      display: flex;
-      flex-direction: column;
-      gap: 0.25rem;
-      font-size: 0.95rem;
+  .hero-card-footer {
+    margin-top: 1.2rem;
+    padding-top: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: 0.95rem;
   }
 
-    .hero-card {
-      padding-bottom: 2rem !important;
-      margin-bottom: 2.5rem !important;
+  .hero-card {
+    padding-bottom: 2rem !important;
+    margin-bottom: 2.5rem !important;
   }
 
-    #servicios {
-      margin-top: 7.5rem;  /* como ya lo tienes */
-      padding-top: 0.5rem;
+  #servicios {
+    margin-top: 5rem;
+    padding-top: 0.5rem;
   }
 
-  /* 👇 Firma solo visible en móvil */
-    .firma-mobile {
+  /* --- Firma visible en móvil --- */
+  .firma-mobile {
       display: block;
       margin-top: 1rem;
       font-size: 0.95rem;
       font-weight: 500;
-      color: #1f2933;
+      color: #f29333;
+      text-align: center;
   }
-}
-    
-  /* Firma oculta por defecto (escritorio) */
-    .firma-mobile {
-      display: none;
 }
 
     body {
@@ -731,7 +731,7 @@
         Combinamos tecnología de precisión con experiencia en campo y conocimiento normativo para entregar información
         topográfica y valuaciones confiables, listas para trámites, diseño y ejecución de obra.
       </p>
-
+      
   <!-- Firma visible solo en móvil -->
       <p class="firma-mobile">
       Ing. Jorge Antonio Robles Vargas · Director de Proyecto · EyPISA
