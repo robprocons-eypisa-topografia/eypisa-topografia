@@ -41,31 +41,27 @@
 
     .hero-card {
       padding-bottom: 2rem !important;
+      margin-bottom: 2.5rem !important;
   }
-      /* 💡 Nuevo: bajar la sección de SERVICIOS en celular */
+
     #servicios {
-      margin-top: 7.5rem;   /* o 3rem si lo quieres aún más abajo */
+      margin-top: 7.5rem;  /* como ya lo tienes */
       padding-top: 0.5rem;
   }
-}
-      /* Firma solo para versión móvil */
-    .firma-mobile {
-      display: none;
-}
-        
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    
+
+  /* 👇 Firma solo visible en móvil */
     .firma-mobile {
       display: block;
       margin-top: 1rem;
       font-size: 0.95rem;
       font-weight: 500;
-      color: #1f2933; /* un gris oscuro legible sobre fondo claro */
+      color: #1f2933;
   }
+}
+    
+  /* Firma oculta por defecto (escritorio) */
+    .firma-mobile {
+      display: none;
 }
 
     body {
