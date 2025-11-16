@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Topografía y Valuación en Baja California | Energía y Proyectos Inteligentes, S.A. de C.V.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Servicios profesionales de topografía, valuación y consultoría técnica en Baja California. Levantamientos topográficos, fraccionamientos, terracerías, vialidades y avalúos inmobiliarios con equipo GNSS RTK y estación total." />
+  <meta name="keywords" content="topografía Ensenada, topógrafo Valle de Guadalupe, valuación inmobiliaria Baja California, levantamiento topográfico, GNSS RTK, fraccionamientos ejidales, terracerías, vialidades" />
+  <meta name="author" content="Energía y Proyectos Inteligentes, S.A. de C.V." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Topografía y Valuación en Baja California | EyPISA" />
+  <meta property="og:description" content="Levantamientos topográficos, valuación y consultoría técnica con precisión GNSS RTK en Baja California." />
+  <meta property="og:type" content="website" />
+  <!-- Si después tienes dominio, cámbialo aquí -->
+  <meta property="og:url" content="https://www.tudominio.com/" />
+
+  <style>
+    :root {
+      --color-primario: #123b5d;
+      --color-secundario: #f4a024;
+      --color-fondo: #f5f7fa;
+      --color-texto: #222222;
+      --color-texto-suave: #555555;
+      --color-blanco: #ffffff;
+      --max-width: 1100px;
+      --radius: 12px;
+      --shadow-suave: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: var(--color-fondo);
+      color: var(--color-texto);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0e2c45, #185682);
+      color: var(--color-blanco);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.8rem 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .marca {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.95rem;
+    }
+
+    .marca-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .marca-texto {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .marca-texto strong {
+      font-size: 0.92rem;
+    }
+
+    .marca-texto span {
+      font-size: 0.75rem;
+      opacity: 0.9;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      padding: 0.3rem 0.6rem;
+      border-radius: 999px;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .btn-whatsapp-top {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: #25d366;
+      color: #ffffff;
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .btn-whatsapp-top span {
+      font-size: 1.1rem;
+    }
+
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1.5rem 1.2rem 3rem;
+    }
+
+    /* HERO */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+      gap: 2rem;
+      align-items: center;
+      padding: 2.5rem 1.5rem;
+      margin-top: 1.5rem;
+      background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.35), transparent),
+                  radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.15), transparent),
+                  linear-gradient(135deg, #0f2740, #1d5b8f);
+      color: var(--color-blanco);
+      border-radius: 24px;
+      box-shadow: var(--shadow-suave);
+    }
+
+    .hero h1 {
+      font-size: 1.9rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .hero h1 span {
+      color: var(--color-secundario);
+    }
+
+    .hero p {
+      font-size: 0.97rem;
+      max-width: 35rem;
+      opacity: 0.95;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin: 1rem 0 1.3rem;
+      font-size: 0.78rem;
+    }
+
+    .badge {
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      align-items: center;
+    }
+
+    .btn-primario {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.6rem 1.2rem;
+      border-radius: 999px;
+      border: none;
+      background: var(--color-secundario);
+      color: var(--color-primario);
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    }
+
+    .btn-primario:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+      background: #ffb341;
+    }
+
+    .btn-secundario {
+      font-size: 0.85rem;
+      padding: 0.45rem 1rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      background: transparent;
+      color: #ffffff;
+      cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .btn-secundario:hover {
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .hero-contacto-mini {
+      font-size: 0.8rem;
+      opacity: 0.9;
+    }
+
+    .hero-contacto-mini strong {
+      font-weight: 600;
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 220px;
+    }
+
+    .hero-card {
+      background: rgba(9, 19, 38, 0.9);
+      border-radius: 18px;
+      padding: 1.1rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .hero-card-title {
+      font-size: 0.9rem;
+      margin-bottom: 0.1rem;
+    }
+
+    .hero-card-sub {
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .hero-card-metricas {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.7rem;
+      margin: 1.1rem 0;
+    }
+
+    .metric-box {
+      background: linear-gradient(145deg, rgba(13, 65, 114, 0.8), rgba(17, 104, 153, 0.85));
+      border-radius: 12px;
+      padding: 0.6rem;
+      font-size: 0.75rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .metric-label {
+      font-size: 0.72rem;
+      opacity: 0.85;
+    }
+
+    .metric-valor {
+      font-size: 0.96rem;
+      font-weight: 700;
+    }
+
+    .hero-card-footer {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.7rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* SECCIONES GENERALES */
+    section {
+      margin-top: 3rem;
+    }
+
+    .section-header {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-kicker {
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #476a8a;
+    }
+
+    .section-title {
+      font-size: 1.35rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: var(--color-texto-suave);
+      max-width: 600px;
+    }
+
+    /* SERVICIOS */
+    .grid-servicios {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .servicio-card {
+      background: var(--color-blanco);
+      border-radius: var(--radius);
+      padding: 1rem;
+      box-shadow: var(--shadow-suave);
+      border: 1px solid #e1e5ec;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      font-size: 0.9rem;
+    }
+
+    .servicio-titulo {
+      font-weight: 700;
+      font-size: 0.98rem;
+      color: var(--color-primario);
+    }
+
+    .servicio-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      background: rgba(18, 59, 93, 0.06);
+      color: #34506e;
+      margin-bottom: 0.2rem;
+    }
+
+    .servicio-lista {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 0.4rem;
+      font-size: 0.86rem;
+    }
+
+    .servicio-lista li {
+      position: relative;
+      padding-left: 1.1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .servicio-lista li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--color-secundario);
+    }
+
+    /* EXPERIENCIA / POR QUÉ NOSOTROS */
+    .grid-experiencia {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    .experiencia-card {
+      background: var(--color-blanco);
+      border-radius: var(--radius);
+      padding: 1rem;
+      box-shadow: var(--shadow-suave);
+      border: 1px solid #e1e5ec;
+      font-size: 0.9rem;
+    }
+
+    .lista-check {
+      margin-top: 0.7rem;
+      list-style: none;
+      font-size: 0.86rem;
+    }
+
+    .lista-check li {
+      margin-bottom: 0.35rem;
+      padding-left: 1.3rem;
+      position: relative;
+    }
+
+    .lista-check li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #1c8244;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+
+    /* PROYECTOS */
+    .grid-proyectos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .proyecto-card {
+      background: var(--color-blanco);
+      border-radius: var(--radius);
+      padding: 0.9rem;
+      box-shadow: var(--shadow-suave);
+      border: 1px solid #e1e5ec;
+      font-size: 0.86rem;
+    }
+
+    .proyecto-lugar {
+      font-size: 0.76rem;
+      color: #60738a;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.2rem;
+    }
+
+    .proyecto-titulo {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--color-primario);
+      margin-bottom: 0.2rem;
+    }
+
+    .proyecto-detalle {
+      color: var(--color-texto-suave);
+    }
+
+    /* CONTACTO */
+    .contacto-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    .contacto-card {
+      background: var(--color-blanco);
+      border-radius: var(--radius);
+      padding: 1rem;
+      box-shadow: var(--shadow-suave);
+      border: 1px solid #e1e5ec;
+      font-size: 0.9rem;
+    }
+
+    .contacto-datos {
+      font-size: 0.9rem;
+      display: grid;
+      gap: 0.4rem;
+      margin-top: 0.7rem;
+    }
+
+    .contacto-datos span {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      align-items: baseline;
+    }
+
+    .contacto-datos strong {
+      min-width: 70px;
+    }
+
+    .contacto-nota {
+      font-size: 0.8rem;
+      color: var(--color-texto-suave);
+      margin-top: 0.6rem;
+    }
+
+    .contacto-form input,
+    .contacto-form textarea {
+      width: 100%;
+      padding: 0.5rem 0.6rem;
+      border-radius: 8px;
+      border: 1px solid #d2d7e0;
+      font-size: 0.86rem;
+      margin-bottom: 0.6rem;
+      font-family: inherit;
+    }
+
+    .contacto-form textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+
+    .contacto-form button {
+      border: none;
+      border-radius: 999px;
+      background: var(--color-primario);
+      color: var(--color-blanco);
+      font-size: 0.86rem;
+      padding: 0.55rem 1.2rem;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.15s ease, transform 0.15s ease;
+    }
+
+    .contacto-form button:hover {
+      background: #17466c;
+      transform: translateY(-1px);
+    }
+
+    .mini-mapa {
+      border-radius: var(--radius);
+      border: 1px solid #d2d7e0;
+      background: #e0e6f0;
+      padding: 0.8rem;
+      font-size: 0.8rem;
+      color: #4b6078;
+    }
+
+    .mini-mapa strong {
+      display: block;
+      margin-bottom: 0.35rem;
+      color: #2b425c;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0d2236;
+      color: rgba(255, 255, 255, 0.8);
+      padding: 1.3rem 1.2rem;
+      font-size: 0.78rem;
+      margin-top: 2rem;
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.6rem;
+      align-items: center;
+    }
+
+    .footer-inner a {
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 880px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 1.8rem 1.2rem;
+      }
+
+      .grid-experiencia,
+      .contacto-layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-visual {
+        min-height: 180px;
+        margin-top: 1rem;
+      }
+
+      .nav-links {
+        display: none; /* para mantenerlo simple en móvil */
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 1.6rem;
+      }
+
+      main {
+        padding-inline: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <div class="marca">
+      <div class="marca-logo">
+        <!-- Iniciales del logo -->
+        EY
+      </div>
+      <div class="marca-texto">
+        <strong>Energía y Proyectos Inteligentes, S.A. de C.V.</strong>
+        <span>Topografía · Valuación · Consultoría</span>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="#servicios">Servicios</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#contacto">Contacto</a>
+      <!-- Cambia al número que quieras usar como principal para WhatsApp -->
+      <a class="btn-whatsapp-top" href="https://wa.me/526461321019" target="_blank" rel="noopener">
+        <span>✆</span> WhatsApp
+      </a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div>
+      <h1>
+        Topografía y Valuación Profesional en
+        <span>Baja California</span>
+      </h1>
+      <p>
+        Levantamientos topográficos de alta precisión, proyectos de terracerías, fraccionamientos y valuación inmobiliaria
+        con enfoque técnico, normativo y de factibilidad. Acompañamos a desarrolladores, ejidos, empresas y particulares
+        desde el terreno hasta el plano aprobado.
+      </p>
+
+      <div class="hero-badges">
+        <div class="badge">GNSS RTK · Estación Total</div>
+        <div class="badge">Experiencia en fraccionamientos ejidales</div>
+        <div class="badge">Dictámenes técnicos y memorias descriptivas</div>
+      </div>
+
+      <div class="hero-cta">
+        <a class="btn-primario" href="#contacto">Solicitar una cotización</a>
+        <a class="btn-secundario" href="#servicios">Ver servicios de topografía</a>
+      </div>
+
+      <p class="hero-contacto-mini">
+        <strong>Atendemos:</strong> Ensenada, Valle de Guadalupe, Santo Tomás, Rosarito y región.
+      </p>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div>
+          <div class="hero-card-title">Resumen de capacidad técnica</div>
+          <div class="hero-card-sub">Equipos GNSS RTK, estación total, procesamiento CAD</div>
+        </div>
+        <div class="hero-card-metricas">
+          <div class="metric-box">
+            <div class="metric-label">Precisión GNSS RTK</div>
+            <div class="metric-valor">±2 cm</div>
+          </div>
+          <div class="metric-box">
+            <div class="metric-label">Áreas por proyecto</div>
+            <div class="metric-valor">hasta 1,000 ha</div>
+          </div>
+          <div class="metric-box">
+            <div class="metric-label">Formatos de entrega</div>
+            <div class="metric-valor">DWG · DXF · PDF</div>
+          </div>
+          <div class="metric-box">
+            <div class="metric-label">Servicios clave</div>
+            <div class="metric-valor">Topografía · Valuación</div>
+          </div>
+        </div>
+        <div class="hero-card-footer">
+          <span>Ing. Jorge Antonio Robles Vargas</span>
+          <span>Director de Proyecto · EyPISA</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios">
+    <div class="section-header">
+      <div class="section-kicker">Servicios</div>
+      <h2 class="section-title">Qué hacemos por tu proyecto</h2>
+      <p class="section-subtitle">
+        Combinamos tecnología de precisión con experiencia en campo y conocimiento normativo para entregar información
+        topográfica y valuaciones confiables, listas para trámites, diseño y ejecución de obra.
+      </p>
+    </div>
+
+    <div class="grid-servicios">
+      <article class="servicio-card">
+        <div class="servicio-tag">Topografía de precisión</div>
+        <h3 class="servicio-titulo">Levantamientos topográficos GNSS RTK y estación total</h3>
+        <p>
+          Levantamientos planimétricos y altimétricos para proyectos urbanos, rurales, industriales y agrícolas.
+        </p>
+        <ul class="servicio-lista">
+          <li>Levantamientos para fraccionamientos y subdivisiones</li>
+          <li>Levantamientos de vialidades y terracerías</li>
+          <li>Modelos de terreno y curvas de nivel</li>
+          <li>Control topográfico de obra</li>
+        </ul>
+      </article>
+
+      <article class="servicio-card">
+        <div class="servicio-tag">Valuación</div>
+        <h3 class="servicio-titulo">Valuación y análisis técnico de inmuebles</h3>
+        <p>
+          Apoyo técnico para estimación de valor y análisis de potencial de desarrollo de predios urbanos y rurales.
+        </p>
+        <ul class="servicio-lista">
+          <li>Análisis de valor con enfoque en uso de suelo</li>
+          <li>Apoyo en avalúos catastrales y comerciales</li>
+          <li>Estudios de factibilidad y vocación del predio</li>
+        </ul>
+      </article>
+
+      <article class="servicio-card">
+        <div class="servicio-tag">Desarrollo y fraccionamientos</div>
+        <h3 class="servicio-titulo">Topografía aplicada a proyectos de desarrollo</h3>
+        <p>
+          Asesoría integral para proyectos de fraccionamiento, regularización y lotificación.
+        </p>
+        <ul class="servicio-lista">
+          <li>Trazo y replanteo de lotes</li>
+          <li>Diseño de vialidades y secciones tipo</li>
+          <li>Memorias descriptivas y planos ejecutivos</li>
+          <li>Apoyo para trámites ante autoridades</li>
+        </ul>
+      </article>
+
+      <article class="servicio-card">
+        <div class="servicio-tag">Consultoría técnica</div>
+        <h3 class="servicio-titulo">Dictámenes, memorias y soporte a despachos</h3>
+        <p>
+          Trabajamos de la mano con despachos de arquitectura, ingeniería, notarios y desarrolladores.
+        </p>
+        <ul class="servicio-lista">
+          <li>Dictámenes técnicos de apoyo a proyectos</li>
+          <li>Memorias descriptivas y reportes</li>
+          <li>Integración de información topográfica a CAD/BIM</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- EXPERIENCIA -->
+  <section id="experiencia">
+    <div class="section-header">
+      <div class="section-kicker">Experiencia</div>
+      <h2 class="section-title">Por qué trabajar con nosotros</h2>
+      <p class="section-subtitle">
+        Más que entregar planos, buscamos entregar claridad: qué se puede hacer en el predio, cómo, y con qué
+        restricciones técnicas y normativas.
+      </p>
+    </div>
+
+    <div class="grid-experiencia">
+      <div class="experiencia-card">
+        <h3 style="margin-bottom: 0.4rem;">Enfoque técnico y estratégico</h3>
+        <p>
+          Desde vialidades ejidales y proyectos en el Valle de Guadalupe, hasta estudios para desarrollos y fraccionamientos,
+          entendemos la realidad del terreno y de los trámites.
+        </p>
+        <ul class="lista-check">
+          <li>Experiencia en terrenos rurales, ejidales y agroindustriales</li>
+          <li>Integración de curvas de nivel y secciones tipo para diseño de terracerías</li>
+          <li>Visión de factibilidad, no solo de levantamiento</li>
+          <li>Coordinación con arquitectos, ingenieros y notarios</li>
+        </ul>
+      </div>
+
+      <div class="experiencia-card">
+        <h3 style="margin-bottom: 0.4rem;">Entrega de información lista para usarse</h3>
+        <p>
+          Entregamos en formatos compatibles con tus procesos de diseño y trámite.
+        </p>
+        <ul class="lista-check">
+          <li>Planos en DWG, DXF y PDF</li>
+          <li>Reportes y memorias descriptivas en Word/PDF</li>
+          <li>Integración con herramientas CAD y SIG</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section id="proyectos">
+    <div class="section-header">
+      <div class="section-kicker">Proyectos</div>
+      <h2 class="section-title">Algunas líneas de trabajo</h2>
+      <p class="section-subtitle">
+        Estos son ejemplos representativos del tipo de proyectos que atendemos. Podemos adaptar el servicio a la escala y
+        necesidades específicas de tu predio o desarrollo.
+      </p>
+    </div>
+
+    <div class="grid-proyectos">
+      <article class="proyecto-card">
+        <div class="proyecto-lugar">Valle de Guadalupe</div>
+        <div class="proyecto-titulo">Vialidades ejidales y terracerías</div>
+        <p class="proyecto-detalle">
+          Levantamientos topográficos para diseño de secciones tipo, pendientes y drenaje pluvial de caminos rurales
+          y accesos a desarrollos vitivinícolas.
+        </p>
+      </article>
+
+      <article class="proyecto-card">
+        <div class="proyecto-lugar">Zona costa de Ensenada</div>
+        <div class="proyecto-titulo">Levantamientos para fraccionamientos y lotificación</div>
+        <p class="proyecto-detalle">
+          Apoyo en lotificación, trazo de manzanas y definición de lotes para proyectos residenciales y mixtos,
+          integrando condicionantes topográficas desde el inicio.
+        </p>
+      </article>
+
+      <article class="proyecto-card">
+        <div class="proyecto-lugar">Baja California</div>
+        <div class="proyecto-titulo">Estudios de predios para inversión</div>
+        <p class="proyecto-detalle">
+          Levantamientos y análisis técnico de predios para futuros desarrollos industriales, logísticos, turísticos
+          o de vivienda, considerando accesos, pendientes y servicios.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <div class="section-header">
+      <div class="section-kicker">Contacto</div>
+      <h2 class="section-title">Cuéntanos de tu predio o proyecto</h2>
+      <p class="section-subtitle">
+        Envíanos la ubicación (enlace de Google Maps, croquis o planos) y una breve descripción de lo que necesitas:
+        levantamiento, valuación, fraccionamiento, vialidades, etc. Te responderemos con una propuesta clara.
+      </p>
+    </div>
+
+    <div class="contacto-layout">
+      <div class="contacto-card">
+        <h3 style="margin-bottom: 0.6rem;">Datos de contacto</h3>
+        <div class="contacto-datos">
+          <span>
+            <strong>Empresa:</strong>
+            Energía y Proyectos Inteligentes, S.A. de C.V.
+          </span>
+          <span>
+            <strong>Correo:</strong>
+            <a href="mailto:energiainteligente.sa@gmail.com">energiainteligente.sa@gmail.com</a>
+          </span>
+          <span>
+            <strong>Tel.:</strong>
+            +52 646 132 1019 (Ing. Jorge)<br />
+          </span>
+          <span>
+            <strong>Zona:</strong>
+            Ensenada · Valle de Guadalupe · Santo Tomás · Rosarito y región.
+          </span>
+        </div>
+
+        <p class="contacto-nota">
+          También podemos agendar una visita de campo para conocer el predio, revisar accesos y comentar opciones de
+          desarrollo y factibilidad.
+        </p>
+
+        <p style="margin-top: 0.6rem; font-size: 0.85rem;">
+          Si lo prefieres, escríbenos directo por WhatsApp:
+          <a href="https://wa.me/526461321019" target="_blank" rel="noopener">
+            clic aquí para iniciar chat
+          </a>.
+        </p>
+      </div>
+
+      <div class="contacto-card">
+        <h3 style="margin-bottom: 0.6rem;">Envíanos un mensaje</h3>
+        <!-- FORMULARIO ESTÁTICO (puedes conectarlo luego a un servicio tipo Formspree, Netlify Forms, etc.) -->
+        <form class="contacto-form">
+          <input type="text" name="nombre" placeholder="Nombre completo" required />
+          <input type="email" name="email" placeholder="Correo electrónico" required />
+          <input type="text" name="telefono" placeholder="Teléfono o WhatsApp" />
+          <textarea name="mensaje" placeholder="Describe brevemente tu predio o proyecto (ubicación y qué necesitas)."></textarea>
+          <button type="submit">Enviar (configurar con tu proveedor)</button>
+        </form>
+
+        <div class="mini-mapa">
+          <strong>Ubicación de referencia</strong>
+          Trabajamos principalmente desde Ensenada y el Valle de Guadalupe, con alcance a otros municipios de Baja California.
+          Si tu predio está en otra zona, indícalo en el mensaje para evaluar logística de visita.
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>© <span id="year"></span> Energía y Proyectos Inteligentes, S.A. de C.V. · Todos los derechos reservados.</div>
+    <div>Topografía · Valuación · Consultoría técnica</div>
+  </div>
+</footer>
+
+<script>
+  // Actualiza el año del footer automáticamente
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
