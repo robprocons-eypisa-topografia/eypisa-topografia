@@ -28,27 +28,18 @@
       --shadow-suave: 0 10px 25px rgba(0, 0, 0, 0.08);
     }
 
-.firma-mobile {
-    text-align: center;
-    margin-top: 1.5rem;
-    color: #1f8a3b;        /* Verde EyPISA */
-    font-size: 1.25rem;    /* Más grande en escritorio */
-    font-weight: 600;
-    line-height: 1.4;
+/* Firma general (escritorio por defecto) */
+.firma-escritorio {
+  margin-top: 1rem;
+  font-size: 1.05rem;      /* un poco más grande */
+  font-weight: 600;
+  color: #16a34a;          /* verde (puedes ajustar el tono) */
+  text-align: right;       /* o center si la quieres centrada */
+  line-height: 1.4;
 }
 
-.firma-mobile .cargo {
-    display: block;
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: #1f8a3b;
-}
-    
-  /* Ocultar firma en escritorio */
-  .firma-mobile {
-      display: none;
-}
-   @media (max-width: 768px) {
+/* Ajustes SOLO para pantallas chicas (móvil) */
+@media (max-width: 768px) {
 
   .hero-card-footer {
     margin-top: 1.2rem;
@@ -69,14 +60,11 @@
     padding-top: 0.5rem;
   }
 
-  /* --- Firma visible en móvil --- */
-  .firma-mobile {
-      display: block;
-      margin-top: 1rem;
-      font-size: 0.95rem;
-      font-weight: 500;
-      color: #1f8a3b;
-      text-align: center;
+  /* Firma en móvil: centrada y en verde */
+  .firma-escritorio {
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 0.5rem;
   }
 }
 
@@ -730,7 +718,7 @@
             <div class="metric-valor">Topografía · Valuación</div>
           </div>
         </div>
-        <div class="firma-mobile">
+        <div class="firma-escritorio">
             Ing. Jorge Antonio Robles Vargas<br>
             <span class="cargo">Director de Proyecto · EyPISA</span>
         </div>
@@ -748,14 +736,7 @@
         topográfica y valuaciones confiables, listas para trámites, diseño y ejecución de obra.
       </p>
       
-  <!-- Firma visible solo en móvil -->
-      <p class="firma-mobile">
-        Ing. Jorge Antonio Robles Vargas<BR>
-        Director de Proyecto · EyPISA
-      </p>
-    </div>
-
-    <div class="grid-servicios">
+      <div class="grid-servicios">
       <article class="servicio-card">
         <div class="servicio-tag">Topografía de precisión</div>
         <h3 class="servicio-titulo">Levantamientos topográficos GNSS RTK y estación total</h3>
